@@ -1,0 +1,171 @@
+/* =========================
+   CONTAINER
+========================= */
+.services-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* =========================
+   GRID LAYOUT
+========================= */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 200px;
+  gap: 24px;
+}
+
+/* =========================
+   CARD BASE
+========================= */
+.card {
+  position: relative;
+  background: transparent;
+  border: 1px solid rgba(59, 130, 246, 0.5);
+  border-radius: 16px;
+  padding: 32px 120px 32px 32px; /* right space for icon */
+  display: flex;
+  align-items: center;
+}
+
+/* =========================
+   CARD CONTENT
+========================= */
+.card .text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.card h3 {
+  font-size: 20px;
+  color: #fff;
+  margin-bottom: 8px;
+}
+
+.card p {
+  font-size: 14px;
+  color: #cfcfcf;
+  max-width: 260px;
+}
+
+/* =========================
+   ICON
+========================= */
+.card .icon {
+  position: absolute;
+  right: 24px;
+  top: 35%;
+  transform: translateY(-50%);
+  width: 150px;
+  height: 120px;
+  background: transparent;
+  border-radius: 50%;
+}
+.card .icon2 {
+   position: absolute;
+  right: 24px;
+  top: 40%;
+  transform: translateY(-50%);
+  width: 150px;
+  height: 120px;
+  background: transparent;
+  border-radius: 50%;
+}
+.card .icon3 {
+   position: absolute;
+  right: 15px;
+  top: 40%;
+  transform: translateY(-50%);
+  width: 150px;
+  height: 120px;
+  background: transparent;
+  border-radius: 50%;
+}
+/* =========================
+   GRID SPANS
+========================= */
+.card-1,
+.card-4,
+.card-5 {
+  grid-column: span 2;
+}
+
+.card-2,
+.card-3,
+.card-6 {
+  grid-column: span 1;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 992px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .card {
+    grid-column: span 1 !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* ===================================
+   SAFE HOVER ANIMATION (NO LAYOUT SHIFT)
+=================================== */
+
+/* Smooth transition only */
+.card {
+  transition: box-shadow 0.35s ease;
+}
+
+/* Animate INNER content only */
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 16px;
+  pointer-events: none;
+  transition: box-shadow 0.35s ease;
+}
+
+/* Hover effect */
+.card:hover::before {
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.45);
+}
+
+/* Icon micro-animation */
+.card:hover .icon,
+.card:hover .icon2,
+.card:hover .icon3{
+  transform: translateY(-50%) scale(1.08);
+  transition: transform 0.35s ease;
+}
+/* =========================
+   TEXT ANIMATION (ALWAYS ON)
+========================= */
+
+.card .text {
+  animation: textFloat 4s ease-in-out infinite;
+}
+
+@keyframes textFloat {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
