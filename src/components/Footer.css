@@ -1,0 +1,23 @@
+.footer {
+  width: 100%;
+  background: #000;
+  color: #9ca3af;
+  padding: 60px 40px 30px;
+  position: static; /* IMPORTANT */
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 40px;
+}
+
+.footer-bottom {
+  margin-top: 40px;
+  text-align: center;
+  font-size: 14px;
+  border-top: 1px solid #1f2937;
+  padding-top: 20px;
+}

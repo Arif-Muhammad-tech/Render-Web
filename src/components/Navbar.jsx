@@ -1,5 +1,5 @@
 import React from "react";
-
+import "./navbar.css";
 function Navbar() {
   return (
     <nav className="w-full fixed top-0 left-0 z-50 border-b-4 border-blue-600">

@@ -1,17 +1,36 @@
-import React from 'react';
+import "./whyChooseUs.css";
 
-function WhyChooseUs() {
+export default function WhyChooseUs() {
   return (
-    <section className="min-h-screen flex items-center justify-center text-white">
-      <div className="text-center max-w-2xl px-6">
-        <h2 className="text-4xl font-bold mb-6">Why Choose Us</h2>
-        <p className="text-gray-300">
-          We are a team of passionate developers and designers who are committed
-          to delivering high-quality web solutions.
+    <section className="why-section">
+      <div className="why-container">
+        <h2 className="why-title">Why Choose Us</h2>
+        <p className="why-subtitle">
+          We focus on quality, performance, and real business value.
         </p>
+
+        <div className="why-grid">
+          <div className="why-card">
+            <h3>Modern Design</h3>
+            <p>Clean, modern UI built with user experience in mind.</p>
+          </div>
+
+          <div className="why-card">
+            <h3>Hosting Support</h3>
+            <p>Providing reliable hosting solutions for your projects.</p>
+          </div>
+
+          <div className="why-card">
+            <h3>Scalable Code</h3>
+            <p>Clean architecture that grows with your business.</p>
+          </div>
+
+          <div className="why-card">
+            <h3>SEO Ready</h3>
+            <p>Built with SEO best practices for visibility and reach.</p>
+          </div>
+        </div>
       </div>
     </section>
   );
 }
-
-export default WhyChooseUs;

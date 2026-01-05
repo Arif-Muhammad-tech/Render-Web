@@ -1,0 +1,79 @@
+.how-container {
+  padding: 120px 20px;
+  text-align: center;
+  color: white;
+}
+
+.how-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 80px;
+}
+
+/* Flow Layout */
+.flow-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+/* Step Card */
+.step-box {
+  width: 220px;
+  padding: 30px 20px;
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 16px;
+  background: rgba(255,255,255,0.02);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.step-box:hover {
+  transform: translateY(-10px);
+  border-color: #3b82f6;
+}
+
+.step-box h3 {
+  margin-top: 12px;
+  font-size: 18px;
+}
+
+.step-box p {
+  font-size: 14px;
+  color: #bdbdbd;
+  margin-top: 8px;
+}
+
+/* Number Circle */
+.step-circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #3b82f6, #06b6d4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  margin: 0 auto 10px;
+}
+
+/* Line between steps */
+.flow-line {
+  width: 60px;
+  height: 2px;
+  background: linear-gradient(to right, transparent, #3b82f6, transparent);
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .flow-wrapper {
+    flex-direction: column;
+  }
+
+  .flow-line {
+    width: 2px;
+    height: 40px;
+  }
+}

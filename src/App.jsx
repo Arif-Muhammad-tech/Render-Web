@@ -1,20 +1,35 @@
-import React from 'react'
-import Home from './pages/Home'
-import CursorGlow from './components/CursorGlow'
-import Background from './components/background'
-import './App.css'
+import { useEffect, useState } from "react";
+import Home from "./pages/Home";
+import CursorGlow from "./components/CursorGlow";
+import Background from "./components/background";
+import Loader from "./components/Loader";
+import "./App.css";
 
 function App() {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 2000); // adjust time if needed
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (loading) {
+    return <Loader />;
+  }
+
   return (
     <>
-      {/* Background Layer */}
+      {/* Background */}
       <div className="bg-layer">
         <Background />
       </div>
 
-      {/* UI Content */}
+      {/* Main App */}
       <div className="app-content">
-        <Home />
+        {loading ? <Loader /> : <Home />}
       </div>
 
       <CursorGlow />

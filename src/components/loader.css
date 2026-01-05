@@ -1,0 +1,31 @@
+/* Fullscreen loader wrapper */
+.loader-container {
+  position: fixed;
+  inset: 0;
+  background: #000; /* or transparent if you want */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.loader-gif {
+  width: 250px; /* adjust size */
+  height: auto;
+}
+
+
+/* Animation */
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}

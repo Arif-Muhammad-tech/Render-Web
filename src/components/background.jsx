@@ -12,12 +12,11 @@ const color = "#003cff65";
 
 const Icosahedron = () => (
   <mesh rotation-x={0.35}>
-    <sphereGeometry args={[1, 32, 32]} />
-    <meshBasicMaterial
-  color="#ffffffff"
-  transparent={true}
-  opacity={0.6}
-/>
+    <boxGeometry args={[1, 1, 1]} />
+    <meshBasicMaterial color="#000000ff"
+      transparent={true}
+      opacity={0.6}
+      wireframe={true}/>
 
   </mesh>
 );
