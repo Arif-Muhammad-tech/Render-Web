@@ -26,7 +26,8 @@
   background: transparent;
   border: 1px solid rgba(59, 130, 246, 0.5);
   border-radius: 16px;
-  padding: 32px 120px 32px 32px; /* right space for icon */
+  padding: 32px 120px 32px 32px;
+  /* right space for icon */
   display: flex;
   align-items: center;
 }
@@ -65,8 +66,9 @@
   background: transparent;
   border-radius: 50%;
 }
+
 .card .icon2 {
-   position: absolute;
+  position: absolute;
   right: 24px;
   top: 40%;
   transform: translateY(-50%);
@@ -75,8 +77,9 @@
   background: transparent;
   border-radius: 50%;
 }
+
 .card .icon3 {
-   position: absolute;
+  position: absolute;
   right: 15px;
   top: 40%;
   transform: translateY(-50%);
@@ -85,6 +88,7 @@
   background: transparent;
   border-radius: 50%;
 }
+
 /* =========================
    GRID SPANS
 ========================= */
@@ -117,6 +121,18 @@
   .services-grid {
     grid-template-columns: 1fr;
   }
+
+  .icon {
+    max-width: 100px;
+    max-height: 100px
+  }
+  .icon2 {
+    max-width: 100px;
+    max-height: 100px
+  }
+  .icon3 {
+    max-width: 100px;
+    max-height: 100px
 }
 
 
@@ -147,10 +163,11 @@
 /* Icon micro-animation */
 .card:hover .icon,
 .card:hover .icon2,
-.card:hover .icon3{
+.card:hover .icon3 {
   transform: translateY(-50%) scale(1.08);
   transition: transform 0.35s ease;
 }
+
 /* =========================
    TEXT ANIMATION (ALWAYS ON)
 ========================= */
@@ -163,9 +180,11 @@
   0% {
     transform: translateY(0);
   }
+
   50% {
     transform: translateY(-6px);
   }
+
   100% {
     transform: translateY(0);
   }

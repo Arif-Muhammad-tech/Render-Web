@@ -50,7 +50,7 @@ function Services() {
                     <div className="card card-6">
                         <div className="text">
                             <h3>Resume Preparation</h3>
-                            <p>Helping you create a compelling resume that stands out from the crowd</p>
+                            <p>Helping you create a compelling <br />resume that stands out from the crowd</p>
                         </div>
                         <div className="icon3"><img src={portfolioIcon} alt="Portfolio" /></div>
                     </div>
