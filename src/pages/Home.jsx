@@ -4,7 +4,7 @@ import "./Home.css";
 import card_bg from "../assets/images/card_bg.png";
 import card_bg_back from "../assets/images/card_bg.jpeg";
 
-import Services from "../components/services.jsx";
+import Services from "../components/Services.jsx";
 import Why_choose_us from "../components/why_choose_us.jsx";
 import HowWeWork from "../components/HowWeWork.jsx";
 import Projects from "../components/Projects.jsx";
